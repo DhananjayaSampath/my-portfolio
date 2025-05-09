@@ -1,0 +1,95 @@
+<!OCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dhananjaya Sampath | IT Graduate Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+        <!--js for go to top button-->
+        <script>
+            window.onscroll = function () {
+                const btn = document.getElementById("topBtn");
+                btn.style.display = window.scrollY > 300 ? "block" : "none";
+            }
+            function scrollToTop(){
+                window.scrollTo({top: 0, behavior: "smooth"});
+            }
+        </script>
+    </head>
+    <body>
+        <!--navigation bar-->
+        <nav>
+            <a href="index.html">Home</a> 
+            <a href="#about">About</a> 
+            <a href="#project">Projects</a> 
+            <a href="#contact">Contact</a> 
+        </nav>
+        <hr>
+        <!--name and photo-->
+        <div class="container">
+            <div class="text">
+                <h1>I'm<br>Dhananjaya Sampath</h1>
+                <p class="wel">A passionate learner with a keen interest in technology and innovation.</p>
+                <p class="wel">I'm currently an undergraduate at Rajarata University of Sri Lanka, studying at the Faculty of Applied Sciences. I'm exploring the fields of computing and software development as I work toward my academic career goals.</p>
+            </div>
+            <div class="image">
+                <img src="mypic.png" alt="my image">
+            </div>
+        </div>
+        <!--about section-->
+        <div class="grid" id="about">
+            <div class="card">
+              <div class="icon"><i class="fas fa-user"></i></div>
+              <h2>About Me</h2>
+              <p>Hello! I'm an enthusiastic IT undergraduate from Sri Lanka with a strong passion for technology and problem-solving. I love discovering how software shapes our everyday lives.</p>
+            </div>
+            <div class="card">
+              <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+              <h2>Education</h2>
+              <p>I'm studying at Rajarata University of Sri Lanka, Faculty of Applied Sciences, pursuing a BSc in Information Technology. I’ve gained strong foundations in web and software development.</p>
+            </div>
+            <div class="card">
+              <div class="icon"><i class="fas fa-lightbulb"></i></div>
+              <h2>Why I Love Tech</h2>
+              <p>Technology enables us to solve problems creatively. I enjoy learning how to build useful things, and I’m always excited to try new tools and push my boundaries.</p>
+            </div>
+            <div class="card">
+              <div class="icon"><i class="fas fa-bullseye"></i></div>
+              <h2>Career Goals</h2>
+              <p>My goal is to become a skilled full-stack developer. I'm focused on improving my skills in HTML, CSS, and JavaScript while working on real-world projects.</p>
+            </div>
+          </div>
+        <!--projects-->
+        <br>
+        <div class="projects" id="project">
+            <h2>My Projects</h2>
+            <div class="project-placeholder">
+                <p>I'm currently working on some exciting projects. Stay tuned!</p>
+                <p class="note">(Project will be added here soon)</p>
+            </div>
+        <br>
+            <div class="projects-container">
+                <div class="project-card">Project 1</div>
+                <div class="project-card">Project 2</div>
+                <div class="project-card">Project 3</div>
+                <div class="project-card">Project 4</div>
+            </div>
+        </div>
+        <br><br>
+        <!--contact form-->
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>If you have any questions, feel free to reach out!</p>
+            <form action="https://formspree.io/f/mblokoqw" method="post">
+                <label>Name :</label><input type="text" name="name" placeholder="Your Name" required>
+                <label>E mail :</label><input type="email" name="email" placeholder="Your Email" required>
+                <label>Message :</label><textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        <!--go to top button-->
+        <button onclick="scrollToTop()" id="topBtn" title="Go to top">Top</button>
+    </body>
+</html>

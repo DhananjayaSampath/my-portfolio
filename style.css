@@ -62,11 +62,16 @@ h1 {
     flex: 1;
 }
 
+
+
 .image {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 .grid {
     display: grid;

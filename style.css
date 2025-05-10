@@ -44,6 +44,7 @@ img {
     padding: 0 30px;
     padding-left: 10%;
     margin-top: -50px;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -204,10 +205,10 @@ h1 {
 
 .project-card {
   background-color: #ffffff;
-  width: 300px;
+  width: 250px;
   height: 200px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -263,7 +264,7 @@ h1 {
     }
 
     button:hover {
-      background-color: #555;
+      background-color: #365575;
     }
 
 #topBtn {
@@ -278,9 +279,82 @@ h1 {
   display: none;
   width: 50px;
   height: 50px;
+  border: 2px solid white;
   border-radius: 50%;
 }
 
 #topBtn:hover {
   color: #9ddf19;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 0;
+  }
+
+  .text, .image {
+    flex: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  img {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px 10px;
+  }
+
+  .disprojects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .disp {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+    padding: 30px;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  #topBtn {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
 }

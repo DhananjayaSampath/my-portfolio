@@ -17,6 +17,39 @@
                 window.scrollTo({top: 0, behavior: "smooth"});
             }
         </script>
+                <script>
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault(); // Prevent default form submit
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        status.innerText = "✅ Message sent successfully!";
+        status.style.color = "green";
+        form.reset();
+      } else {
+        const data = await response.json();
+        status.innerText = data.errors ? data.errors[0].message : "❌ Oops! Something went wrong.";
+        status.style.color = "red";
+      }
+    } catch (error) {
+      status.innerText = "❌ Network error. Please try again.";
+      status.style.color = "red";
+    }
+  });
+</script>
     </head>
     <body>
         <!--navigation bar-->
@@ -90,39 +123,7 @@
             </form>
             <p id="form-status" style="margin-top: 1rem; font-weight: bold;"></p>
         </section>
-        <script>
-  const form = document.getElementById('contact-form');
-  const status = document.getElementById('form-status');
 
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault(); // Prevent default form submit
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        status.innerText = "✅ Message sent successfully!";
-        status.style.color = "green";
-        form.reset();
-      } else {
-        const data = await response.json();
-        status.innerText = data.errors ? data.errors[0].message : "❌ Oops! Something went wrong.";
-        status.style.color = "red";
-      }
-    } catch (error) {
-      status.innerText = "❌ Network error. Please try again.";
-      status.style.color = "red";
-    }
-  });
-</script>
         <!--go to top button-->
         <button onclick="scrollToTop()" id="topBtn" title="Go to top">Top</button>
     </body>

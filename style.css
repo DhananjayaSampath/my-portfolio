@@ -302,12 +302,12 @@ h1 {
     justify-content: center;
   }
 
-  img {
-    object-fit: cover;
-    width: 300px;
-    height: auto;
-    margin-top: 20px;
-  }
+  .image img {
+  border-radius: 50%;
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
 
   nav {
     text-align: center;

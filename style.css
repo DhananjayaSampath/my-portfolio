@@ -313,9 +313,9 @@ h1 {
     .image img {
     border-radius: 50%;
     width: 300px;
-    height: 150px;
+    height:auto;
     object-fit: cover;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   nav {

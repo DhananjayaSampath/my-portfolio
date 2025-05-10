@@ -307,7 +307,7 @@ h1 {
     height: auto;
     margin-top: 20px;
   }
-  
+
   nav {
     text-align: center;
   }
@@ -359,3 +359,17 @@ h1 {
   color: #2c3e50;
 }
 
+@media (max-width: 768px) {
+    .image {
+        justify-content: flex-end; /* Ensures the image stays on the right side */
+        width: 100%; /* Make sure it takes full width if needed */
+        display: flex;
+        padding-right: 20px; /* Optional: Add some right padding for spacing */
+    }
+
+    img {
+        max-width: 100%; /* Prevents the image from overflowing */
+        height: auto; /* Maintain the aspect ratio */
+        margin-top: 20px; /* Adjust if needed */
+    }
+}

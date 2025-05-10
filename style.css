@@ -304,7 +304,7 @@ h1 {
 
   img {
     width: 300px;
-    height: auto;
+    height: 300px;
     margin-top: 20px;
   }
 
@@ -353,23 +353,4 @@ h1 {
   }
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2c3e50;
-}
 
-@media (max-width: 768px) {
-    .image {
-        justify-content: flex-end; /* Ensures the image stays on the right side */
-        width: 100%; /* Make sure it takes full width if needed */
-        display: flex;
-        padding-right: 20px; /* Optional: Add some right padding for spacing */
-    }
-
-    img {
-        max-width: 100%; /* Prevents the image from overflowing */
-        height: auto; /* Maintain the aspect ratio */
-        margin-top: 20px; /* Adjust if needed */
-    }
-}

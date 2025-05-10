@@ -303,7 +303,7 @@ h1 {
   }
 
   img {
-    display: block;
+    object-fit: cover;
     width: 300px;
     height: auto;
     margin-top: 20px;

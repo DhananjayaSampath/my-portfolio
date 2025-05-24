@@ -222,8 +222,7 @@ button:hover {
     width: 250px;
     height: 200px;
     border-radius: 10px;
-    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-content: center;
     font-weight: bold;
@@ -291,4 +290,22 @@ button:hover {
         padding: 15px;
         margin: 20px;
     }
+}
+
+.project-image {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-link {
+    display: inline-block;
+    text-decoration: none;
+    font-family: poppins;
+    color: #282626;
+    font-size: 14px;
+}
+
+.project-link:hover {
+    color: #87c015;
 }

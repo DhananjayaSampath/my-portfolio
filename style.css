@@ -293,8 +293,9 @@ button:hover {
 }
 
 .project-image {
-    width: 90%;
+    width: 80%;
     height: auto;
+    margin-top: 10px;
     border-radius: 10px;
 }
 
